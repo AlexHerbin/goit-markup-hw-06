@@ -58,6 +58,10 @@ img {
   height: auto;
 }
 
+textarea {
+  resize: none;
+}
+
 /* Логотип */
 
 .logo {
@@ -241,6 +245,8 @@ img {
   left: 50%;
   top: 50%;
 
+  padding: 44px 40px 36px 40px;
+
   width: 528px;
   height: 581px;
 
@@ -271,6 +277,167 @@ img {
   border-radius: 50%;
 
   cursor: pointer;
+
+  transition: fill 250ms var(--taiming-function);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  fill: var(--accent-color);
+}
+
+/* Форма */
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-title {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+
+.form-group {
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+.form-lable {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  color: var(--primary-text-color);
+}
+
+.form-input {
+  padding: 12px 5px 12px 42px;
+
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  cursor: pointer;
+  outline: transparent;
+
+  transition: border 250ms var(--taiming-function);
+}
+
+.form-input:focus,
+.form-comment:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+  transition: fill 250ms var(--taiming-function);
+}
+
+.form-input:focus ~ .form-icon {
+  fill: var(--accent-color);
+}
+
+.form-textarea {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.form-comment {
+  display: block;
+  height: 120px;
+
+  padding: 12px 16px;
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  resize: none;
+  cursor: pointer;
+}
+
+.form-comment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-policy {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.policy-text {
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+}
+
+.policy-doc {
+  color: var(--accent-color);
+}
+
+.custom-checkbox {
+  display: block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+}
+
+.checkbox:checked + .custom-checkbox {
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url(../image/icon/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.form-btn {
+  padding: 10px 55px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  background: #188ce8;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
 }
 
 /* Кнопки */
@@ -775,4 +942,64 @@ img {
 .join-link:hover,
 .join-link:focus {
   background-color: var(--accent-color);
+}
+
+/* Форма "подпишитесь" */
+
+.form-footer {
+  margin-left: 93px;
+}
+
+.form-footer-box {
+  display: flex;
+}
+
+.form-footer-title {
+  display: block;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.form-footer-field {
+  display: block;
+  width: 380px;
+  padding: 15px 16px;
+
+  color: #fff;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  outline: transparent;
+}
+
+.form-footer-btn {
+  position: relative;
+  padding: 10px 62px 10px 29px;
+  margin-left: 12px;
+
+  font-weight: 700;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  color: #fff;
+  background: var(--accent-color);
+  border-color: transparent;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-footer-icon {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+
+  transform: translateY(-50%);
 }
